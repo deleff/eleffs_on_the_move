@@ -86,8 +86,8 @@ func _on_you_win():
 	else:
 		spawn_timer.queue_free()
 		$SfxAudioStreamPlayer.queue_free()
-		$RichTextLabel.text = "YAAAAY, You found {target_name}!!!".format({"target_name": target_name})
-		$RichTextLabel.position = Vector2(225,330)
+		$RichTextLabel.text = "[outline_size=4][outline_color=black] YAAAAY, You found {target_name}!!! [/outline_color][/outline_size]".format({"target_name": target_name})
+		$RichTextLabel.position = Vector2(250,330)
 		$AudioStreamPlayer.stream = load("res://sfx/win.mp3")
 		$AudioStreamPlayer.play()
 		var firework_timer = Timer.new()
@@ -177,7 +177,7 @@ func _on_countdown_timer_timeout():
 		spawn_timer.queue_free()
 		$TimerRichTextLabel.queue_free()
 		$RichTextLabel.position = Vector2(200,330)
-		$RichTextLabel.text = "Time's up! \nYour score: {your_score} seconds! \nCurrent high score: {high_score} seconds!".format({"your_score": score, "high_score": PersistentData.high_score})
+		$RichTextLabel.text = "[outline_size=4][outline_color=black]Time's up! \nYour score: {your_score} seconds! \nCurrent high score: {high_score} seconds! [/outline_color][/outline_size]".format({"your_score": score, "high_score": PersistentData.high_score})
 
 
 func _set_target_family_member():
