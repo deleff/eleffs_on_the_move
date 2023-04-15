@@ -102,7 +102,7 @@ one_shot = true
 visibility_rect = Rect2(0, 0, 0, 0)
 
 [node name="WandGPUParticles2D" type="GPUParticles2D" parent="."]
-modulate = Color(100, 100, 100, 1)
+modulate = Color(0.854902, 0.839216, 0.313726, 1)
 self_modulate = Color(100, 100, 100, 1)
 emitting = false
 amount = 300

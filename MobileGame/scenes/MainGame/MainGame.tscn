@@ -9,6 +9,10 @@
 [sub_resource type="Environment" id="Environment_85rjq"]
 background_mode = 3
 glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.65
+glow_strength = 2.0
+glow_bloom = 1.0
 glow_hdr_threshold = 0.08
 glow_hdr_luminance_cap = 29.01
 
