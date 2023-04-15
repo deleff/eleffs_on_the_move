@@ -48,7 +48,7 @@ func _ready():
 	signal_message_queue.connect("you_win", _on_you_win)
 	signal_message_queue.connect("wrong_person", _on_wrong_person)
 	_set_target_family_member()
-	$RichTextLabel.text = "[outline_size=20][outline_color=black]Playing on {mode} mode[/outline_color][/outline_size]".format({"mode": PersistentData.mode})
+	$RichTextLabel.text = "[outline_size=20][outline_color=black]  Playing on {mode} mode[/outline_color][/outline_size]".format({"mode": PersistentData.mode})
 	if PersistentData.mode == "easy":
 		family_member_speed = 160
 		spawn_timer_timeout = 2
@@ -116,7 +116,7 @@ func _generate_family_member(member,member_position):
 	random_number_generator.randomize()
 	family_member_spawn_x = random_number_generator.randi_range(150,1380)
 	random_number_generator.randomize()
-	family_member_spawn_y = random_number_generator.randi_range(200,600)
+	family_member_spawn_y = random_number_generator.randi_range(240,600)
 	random_number_generator.randomize()
 	family_member_direction_x = random_number_generator.randi_range(-1,1)
 	random_number_generator.randomize()
@@ -151,7 +151,7 @@ func _on_spawn_timer_timeout():
 		var next_family_member = family_members_array[next_family_member_position]
 		print("the family member is: ", next_family_member)
 		_generate_family_member(next_family_member,next_family_member_position)
-	$RichTextLabel.text = "[outline_size=20][outline_color=black]Find [rainbow freq=1.0 sat=0.8 val=0.8]{target_name} [/rainbow]![/outline_color][/outline_size]".format({"target_name": target_name})
+	$RichTextLabel.text = "[outline_size=20][outline_color=black]  Find [rainbow freq=1.0 sat=0.8 val=0.8]{target_name} [/rainbow]![/outline_color][/outline_size]".format({"target_name": target_name})
 	random_number_generator.randomize()
 	var next_family_member_position = random_number_generator.randi_range(0,17)
 	var next_family_member = family_members_array[next_family_member_position]
