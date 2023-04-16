@@ -41,7 +41,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_qxnoy")
 
 [node name="HardModeTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(0, 630)
+position = Vector2(0, 660)
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_3b0cu")
 

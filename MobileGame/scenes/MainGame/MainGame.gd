@@ -80,8 +80,8 @@ func _on_family_member_removed(member_name):
 
 func _on_you_win():
 	if PersistentData.mode == "hard":
-		countdown_timer.start(ceil(countdown_timer.time_left) + 10)
-		score+=10
+		countdown_timer.start(ceil(countdown_timer.time_left) + 5)
+		score+=5
 		_set_target_family_member()
 	else:
 		spawn_timer.queue_free()
@@ -126,6 +126,8 @@ func _generate_family_member(member,member_position):
 	next_member.NAME = _get_family_member_name(member_position,"string")
 	if family_members_on_screen.has(next_member.NAME):
 		next_member.queue_free()
+		if PersistentData.mode != "easy":
+			_on_family_member_removed(next_member.NAME)
 	else:
 		family_member_count +=1
 		family_members_on_screen.append(next_member.NAME)
@@ -157,6 +159,7 @@ func _on_spawn_timer_timeout():
 	var next_family_member = family_members_array[next_family_member_position]
 	print("the family member is: ", next_family_member)
 	_generate_family_member(next_family_member,next_family_member_position)
+
 
 func _on_countdown_timer_timeout():
 	if PersistentData.mode == "hard":

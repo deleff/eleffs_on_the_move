@@ -78,7 +78,7 @@ theme = ExtResource("2_fkfg5")
 bbcode_enabled = true
 
 [node name="TitleScreenTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(0, 620)
+position = Vector2(0, 635)
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("2_gv4ad")
 texture_pressed = ExtResource("2_gv4ad")
